@@ -1,0 +1,10 @@
+
+
+
+.hero__img {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
