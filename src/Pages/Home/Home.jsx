@@ -38,7 +38,6 @@ function Homepage() {
                   alt={logement.title}
                   className="card__img"
                 />
-          
                   <h2 className="card__title">{logement.title}</h2>
                 
               </div>
