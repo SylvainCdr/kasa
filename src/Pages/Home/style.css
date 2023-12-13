@@ -8,3 +8,46 @@
     margin-top: 1rem;
     margin-bottom: 3rem;
 }
+
+ /* disposition des cards en grid 3 colonnes et 2 lignes */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-gap: 1rem; */
+   text-align: center;
+}
+
+.card__img {
+  /*width: 70%;
+  */object-fit: cover;
+  width: 400px;
+  height: 400px;
+  margin-bottom: 2rem;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+}
+
+.card__img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+.card__title {
+    /* display: flex; */
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: absolute;
+    margin-left: 5rem;
+    margin-top: -43vh;
+    width: 380px;
+color: rgb(247, 101, 4);
+border-color: azure;
+}
+
+
+   
+   
+

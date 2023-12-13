@@ -3,16 +3,16 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Homepage() {
-  const [data, setData] = useState([]);
+  const [logements, setLogements] = useState([]);
 
   // API LINK : https://titi.startwin.fr/logements
   // WEBSITE VIEW LINK : https://www.figma.com/file/qEno0LwL4ZLkWyeY59kxp1/UI-Design-Kasa-FR?type=design&node-id=0-1&mode=design
 
   useEffect(() => {
     fetch("https://titi.startwin.fr/logements")
-      .then((response) => response.json())
-      .then((response) => {
-        setData(response);
+        .then((res) => res.json())
+        .then((data) => {
+          setLogements(data);
       });
   }, []);
 
@@ -28,18 +28,29 @@ function Homepage() {
 
       {/* DEBUT CARDS */}
 
+      <div className="cards">
+        {logements.map((logement, index) => {
+          return (
+            <Link to={`/logement/${logement.id}`} key={index}>
+              <div className="card">
+                <img
+                  src={logement.cover}
+                  alt={logement.title}
+                  className="card__img"
+                />
+          
+                  <h2 className="card__title">{logement.title}</h2>
+                
+              </div>
+            </Link>
+          );
+        })}
 
-        <div>
+        {/* FIN CARDS */}
 
 
 
-
-
-
-        </div>
-
-
-
+      </div>
 
       {/* FIN CARDS */}
     </div>
