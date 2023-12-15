@@ -6,10 +6,10 @@ function Footer() {
     return (
 
 
-        <div className="App">
-            <div className='footer'>
-            <img src="/image/footer.png" alt="footer_banner" className='footer__img'/>
-            </div>
+        <div className="footer">
+            
+            <img className="footer_img" src="/image/footer.png" alt="footer_banner"/>
+            
         </div>
     );
 }

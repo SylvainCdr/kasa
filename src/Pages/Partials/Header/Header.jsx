@@ -1,29 +1,16 @@
-import React from 'react';
-import './style.css';
+import './style.scss'
+import { NavLink } from 'react-router-dom'
 
-
-function Header() {
+export default function Header() {
     return (
-       
-        <div className="App">
-           
-           {/* Creation du header avec logo et de deux liens Accueil + A propos */}
-            
-                <div className="header">
-                     
-                          <img src="/image/logo.webp" alt="logo" className='logo__img' />
-    
-
-    <nav className="menu">
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">A propos</a></li>
-        </ul>
-
-            </nav>
-    </div>
-        </div>
+        <>
+            <header class="header">
+                <img src="/image/logo.webp" alt="Logo" />
+                <div>
+                    <NavLink to="/">Accueil</NavLink>
+                    <NavLink to="/a-propos">A propos</NavLink>
+                </div>
+            </header>
+        </>
     );
 }
-
-export default Header;

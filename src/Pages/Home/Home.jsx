@@ -20,10 +20,10 @@ function Homepage() {
     <div className="homepage">
       {/* DEBUT HERO */}
       <div className="heroe">
-        <div className="heroe__text">
+        
           <img src="/image/hero.webp" alt="hero" className="hero__img" />
         </div>
-      </div>
+      
       {/* FIN HERO */}
 
       {/* DEBUT CARDS */}
